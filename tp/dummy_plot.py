@@ -1,4 +1,5 @@
 from scipy.io import wavfile
+from scipy import signal
 from tp.vocal import Letter
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,7 +15,7 @@ def ej1():
 
     X = np.arange(0, len(Y)) / FS
     Y = Y / max(Y)  # Y normalizado
-    plt.title(r'Señal de audio con fonemas', fontsize=20)
+    plt.title('Senal de audio con fonemas', fontsize=20)
     plt.plot(X, Y)
     plt.xticks(np.arange(min(X), max(X), 0.2))
 
@@ -45,8 +46,21 @@ def ej1():
     plt.show()
 
 
+def ej7():
+    sample_rate, samples = wavfile.read('tp/res/hh15.WAV')
+
+    frequencies, times, spectrogram = signal.spectrogram(samples, sample_rate)
+
+    plt.specgram(frequencies, times)
+    plt.imshow(spectrogram)
+    plt.ylabel('Frequency [Hz]')
+    plt.xlabel('Time [sec]')
+    plt.show()
+
+
 def main():
-    ej1()
+    # ej1()
+    ej7()
 
 
 if __name__ == "__main__":
