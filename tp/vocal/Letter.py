@@ -23,13 +23,13 @@ class Word:
 
 LETTERS_POSITION = [
     # Por Gastón
-    Letter('c', 0.5544, 0.5666),
-    Letter('o', 0.5788, 0.6216),
+    Letter('c', 0.5544, 0.5766),
+    Letter('o', 0.5788, 0.6616),
     Letter('n', 0.6644, 0.8660),
-    Letter('t', 0.9216, 0.9316),
-    Letter('a', 0.9416, 0.9954),
+    Letter('t', 0.9216, 0.9400),
+    Letter('a', 0.9416, 1.0454),
     Letter('g', 1.0492, 1.2076),
-    Letter('i', 1.2076, 1.2444),
+    Letter('i', 1.2076, 1.2800),
     Letter('a', 1.2812, 1.3712),
 
     Letter('e', 1.3712, 1.4262),
